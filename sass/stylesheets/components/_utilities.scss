@@ -1,0 +1,49 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the utilities component.
+// -----------------------------------------------------------------------------
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.flex-grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-grid {
+      .col {
+          width: 32%;
+      }
+  }
+  
+  @media (max-width: 400px) {
+    .flex-grid {
+      display: block;
+      .col {
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+.flex-grid { 
+  margin: 0 0 20px 0;
+}
+.col {
+  padding: 20px;
+}
+
+@media (max-width: 1018px) { 
+    .f-right {
+        float: none;
+    }
+}

@@ -1,0 +1,99 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-dupe-args": "error",
+    "no-dupe-keys": "error",
+    "no-empty": "error",
+    "no-extra-semi": "error",
+    "no-func-assign": "error",
+    "no-inner-declarations": "error",
+    "no-unreachable": "error",
+    "valid-jsdoc": "warn",
+    "semi": "error",
+    "consistent-return": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    "no-alert": "error",
+    "no-eq-null": "error",
+    "no-redeclare": "error",
+    "strict": "error",
+    "no-undef": "error",
+    "no-unused-vars": "error",
+    "no-use-before-define": "error",
+    "camelcase": "error",
+    "brace-style": "error",
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-depth": [
+      "error",
+      3
+    ],
+    "max-params": [
+      "warn",
+      5
+    ],
+    "no-inline-comments": "error",
+    "no-multi-assign": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-tabs": "error",
+    "quote-props": [
+      "error",
+      "consistent"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": false,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "globals": {
+    "FormData": true,
+    "XMLHttpRequest": true,
+    "node": true,
+    "browser": true,
+    "module": true,
+    "require": true,
+    "requirejs": true,
+    "define": true,
+    "amd": true,
+    "_gaq": true,
+    "_pa": true,
+    "app": true,
+    "canvg": true,
+    "console": true,
+    "escape": true,
+    "$": true,
+    "jquery": true,
+    "jQuery": true,
+    "System": true,
+    "user": true,
+    "window": true,
+    "document": true,
+    "dialogPolyfill": true,
+    "process": true
+  }
+}
