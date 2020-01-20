@@ -3,18 +3,30 @@
 // default one.
 // -----------------------------------------------------------------------------
 
+body { background: $bg-color;}
 .wrapper {
-    padding: 10px;
-    //background-color: red;
     .card {
-        max-width: 335px;
         width: 100%;
+        max-width: 269px;
         padding: 10px 10px;
         border: 1px solid $light-grey;
         border-radius: 5px;
+        margin-bottom: 40px;
+        flex: 1 0 20%;
+        margin: 5px;
+        background-color: $green;
+        -webkit-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+        -moz-box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+
         .card__title {
             font-size: 22px;
-            color: $brand-color;
+            color: $mid-yellow;
+            padding: 0 0 10px 0;
+            margin: 0;
+            font-family: $openSans;
+            font-weight: 700;
+            text-transform: uppercase;
         }
         .card__image {
             max-width: 315px;
@@ -23,34 +35,42 @@
             object-fit: cover;
         }
         .card__sub-title {
-            font-size: 14px;
-            color: $dark-grey;
-            font-weight: bold;
+            font-size: 16px;
+            color: $mid-yellow;
+            font-family: $openSans;
+            font-weight: 700;
+            line-height: 30px;
         }
         .card__desc {
             font-size: 14px;
-            color: $mid-grey;
+            color: $light;
+            font-family: $openSans;
         }
         .date {
             .date__inner {
                 display: inline-block;
                 .date__inner--icon {
                     display: inline-block;
+                    color: $mid-yellow;
                 }
                 .date__inner--title {
                     @extend .card__sub-title;
                     display: inline-block;
+                    line-height: 30px;
                 }
                 .date__inner--start {
                     @extend .card__sub-title;
                     display: inline-block;
                     text-align: left;
+                    font-weight: normal;
+                    color: $light;
                 }
-               
                 .date__inner--end {
                     @extend .card__sub-title;
                     display: inline-block;
                     text-align: right;
+                    font-weight: normal;
+                    color: $light;
                 }
             }
         }
@@ -62,20 +82,45 @@
             .event-icon {
                 display: inline-block;
                 position: relative;
-                top: 2px;
+                top: 0;
+                color: $mid-yellow;
             }
             .event-title {
                 @extend .card__sub-title;
                 display: inline-block;
-                line-height: 20px;
+                line-height: 30px;
             }
             .event-desc {
                 @extend .card__desc;
                 display: inline-block;
                 line-height: 20px;
+                a {
+                    color: $light;
+                    font-weight: bold;
+                }
+            }
+        }
+        .link {
+            a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 250px;
+                display: block;
+                color: $mid-yellow;
             }
         }
     }
 }
 
+@media (max-width: 400px) {
+    .wrapper {
+      .card {
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+      }
+    }
+}
 
+  

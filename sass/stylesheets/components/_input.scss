@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the inputs component.
+// -----------------------------------------------------------------------------
+
+.input-datepicker {
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid $light-grey;
+    font-size: 16px;
+    color: $dark-blue;
+    font-family: 'Open Sans', Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}

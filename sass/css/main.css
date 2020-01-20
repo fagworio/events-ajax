@@ -1,3 +1,4 @@
+/* Color Theme Swatches in Hex */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -409,6 +410,21 @@ html {
   box-sizing: border-box; }
 
 /**
+ * Set Minimal CSS Reset
+ */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
@@ -423,7 +439,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #F3F2F0;
   text-decoration: none; }
   a:hover, a:active, a:focus {
     color: #222222;
@@ -434,7 +450,8 @@ a {
  */
 body {
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
 
 /**
  * Clear inner floats
@@ -491,6 +508,39 @@ body {
   position: absolute;
   width: 1px; }
 
+.nav-calendar {
+  margin-top: 50px; }
+  .nav-calendar .nav-calendar__wrapper {
+    width: 100%;
+    margin: 5px 5px; }
+    .nav-calendar .nav-calendar__wrapper h3 {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Open Sans', Helvetica,Arial,sans-serif;
+      margin: 10px 0; }
+
+#btn-reset {
+  color: #F2B705;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  height: 40px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  background: #024959;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  #btn-reset:hover {
+    background: #027373;
+    transition: all 250ms linear;
+    color: #F3F2F0; }
+
 .f-left {
   float: left; }
 
@@ -502,7 +552,8 @@ body {
 
 .flex-grid {
   display: flex;
-  justify-content: space-between; }
+  justify-content: flex-start;
+  flex-wrap: wrap; }
 
 .flex-grid .col {
   width: 32%; }
@@ -524,68 +575,230 @@ body {
   .f-right {
     float: none; } }
 
-.wrapper {
-  padding: 10px; }
-  .wrapper .card {
-    max-width: 335px;
+.no-results {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 5px;
+  border-top: 2px dotted #ededed;
+  width: 100%;
+  border-bottom: 2px dotted #ededed;
+  padding: 20px 0; }
+  .no-results h1 {
+    text-align: center; }
+
+.fade-in {
+  -webkit-animation: fadein 1.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 1.5s;
+  /* Opera < 12.1 */
+  animation: fadein 1.5s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.input-datepicker {
+  padding: 10px 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  font-size: 16px;
+  color: #49868C;
+  font-family: 'Open Sans', Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s; }
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0px;
+    opacity: 1; } }
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+body {
+  background: #fdf9f9; }
+
+.wrapper .card {
+  width: 100%;
+  max-width: 269px;
+  padding: 10px 10px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  flex: 1 0 20%;
+  margin: 5px;
+  background-color: #024959;
+  -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2); }
+  .wrapper .card .card__title {
+    font-size: 22px;
+    color: #F2B705;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .wrapper .card .card__image {
+    max-width: 315px;
     width: 100%;
-    padding: 10px 10px;
-    border: 1px solid #ededed;
-    border-radius: 5px; }
-    .wrapper .card .card__title {
-      font-size: 22px;
-      color: #e50050; }
-    .wrapper .card .card__image {
-      max-width: 315px;
-      width: 100%;
-      height: 135px;
-      object-fit: cover; }
-    .wrapper .card .card__sub-title, .wrapper .card .date .date__inner .date__inner--title, .wrapper .card .date .date__inner .date__inner--start, .wrapper .card .date .date__inner .date__inner--end, .wrapper .card .recurrence .event-title,
-    .wrapper .card .costs .event-title,
-    .wrapper .card .link .event-title,
-    .wrapper .card .venue .event-title,
-    .wrapper .card .category .event-title {
-      font-size: 14px;
-      color: #444444;
+    height: 135px;
+    object-fit: cover; }
+  .wrapper .card .card__sub-title, .wrapper .card .date .date__inner .date__inner--title, .wrapper .card .date .date__inner .date__inner--start, .wrapper .card .date .date__inner .date__inner--end, .wrapper .card .recurrence .event-title,
+  .wrapper .card .costs .event-title,
+  .wrapper .card .link .event-title,
+  .wrapper .card .venue .event-title,
+  .wrapper .card .category .event-title {
+    font-size: 16px;
+    color: #F2B705;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 30px; }
+  .wrapper .card .card__desc, .wrapper .card .recurrence .event-desc,
+  .wrapper .card .costs .event-desc,
+  .wrapper .card .link .event-desc,
+  .wrapper .card .venue .event-desc,
+  .wrapper .card .category .event-desc {
+    font-size: 14px;
+    color: #F3F2F0;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  .wrapper .card .date .date__inner {
+    display: inline-block; }
+    .wrapper .card .date .date__inner .date__inner--icon {
+      display: inline-block;
+      color: #F2B705; }
+    .wrapper .card .date .date__inner .date__inner--title {
+      display: inline-block;
+      line-height: 30px; }
+    .wrapper .card .date .date__inner .date__inner--start {
+      display: inline-block;
+      text-align: left;
+      font-weight: normal;
+      color: #F3F2F0; }
+    .wrapper .card .date .date__inner .date__inner--end {
+      display: inline-block;
+      text-align: right;
+      font-weight: normal;
+      color: #F3F2F0; }
+  .wrapper .card .recurrence .event-icon,
+  .wrapper .card .costs .event-icon,
+  .wrapper .card .link .event-icon,
+  .wrapper .card .venue .event-icon,
+  .wrapper .card .category .event-icon {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    color: #F2B705; }
+  .wrapper .card .recurrence .event-title,
+  .wrapper .card .costs .event-title,
+  .wrapper .card .link .event-title,
+  .wrapper .card .venue .event-title,
+  .wrapper .card .category .event-title {
+    display: inline-block;
+    line-height: 30px; }
+  .wrapper .card .recurrence .event-desc,
+  .wrapper .card .costs .event-desc,
+  .wrapper .card .link .event-desc,
+  .wrapper .card .venue .event-desc,
+  .wrapper .card .category .event-desc {
+    display: inline-block;
+    line-height: 20px; }
+    .wrapper .card .recurrence .event-desc a,
+    .wrapper .card .costs .event-desc a,
+    .wrapper .card .link .event-desc a,
+    .wrapper .card .venue .event-desc a,
+    .wrapper .card .category .event-desc a {
+      color: #F3F2F0;
       font-weight: bold; }
-    .wrapper .card .card__desc, .wrapper .card .recurrence .event-desc,
-    .wrapper .card .costs .event-desc,
-    .wrapper .card .link .event-desc,
-    .wrapper .card .venue .event-desc,
-    .wrapper .card .category .event-desc {
-      font-size: 14px;
-      color: #999999; }
-    .wrapper .card .date .date__inner {
-      display: inline-block; }
-      .wrapper .card .date .date__inner .date__inner--icon {
-        display: inline-block; }
-      .wrapper .card .date .date__inner .date__inner--title {
-        display: inline-block; }
-      .wrapper .card .date .date__inner .date__inner--start {
-        display: inline-block;
-        text-align: left; }
-      .wrapper .card .date .date__inner .date__inner--end {
-        display: inline-block;
-        text-align: right; }
-    .wrapper .card .recurrence .event-icon,
-    .wrapper .card .costs .event-icon,
-    .wrapper .card .link .event-icon,
-    .wrapper .card .venue .event-icon,
-    .wrapper .card .category .event-icon {
-      display: inline-block;
-      position: relative;
-      top: 2px; }
-    .wrapper .card .recurrence .event-title,
-    .wrapper .card .costs .event-title,
-    .wrapper .card .link .event-title,
-    .wrapper .card .venue .event-title,
-    .wrapper .card .category .event-title {
-      display: inline-block;
-      line-height: 20px; }
-    .wrapper .card .recurrence .event-desc,
-    .wrapper .card .costs .event-desc,
-    .wrapper .card .link .event-desc,
-    .wrapper .card .venue .event-desc,
-    .wrapper .card .category .event-desc {
-      display: inline-block;
-      line-height: 20px; }
+  .wrapper .card .link a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    display: block;
+    color: #F2B705; }
+
+@media (max-width: 400px) {
+  .wrapper .card {
+    width: 100%;
+    max-width: none;
+    margin: 10px 0; } }

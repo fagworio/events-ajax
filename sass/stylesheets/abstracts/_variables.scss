@@ -24,7 +24,7 @@ $text-color: rgb(34, 34, 34) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: #F3F2F0 !default;
 
 /// Light grey
 /// @type Color
@@ -36,9 +36,22 @@ $mid-grey: rgb(153, 153, 153) !default;
 
 /// Dark grey
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$dark-grey: #333333 !default;
+
+/// hover blue
+/// @type Color
+$hover-blue: rgb(47, 159, 255)!default;
 
 
+/* Color Theme Swatches in Hex */
+$light: #F3F2F0;
+$mid-yellow: #F2B705;
+$green: #024959;
+$mid-orange: #FCC37C;
+$salmon: #F7715D;
+$dark-blue: #49868C;
+$black-blue: #027373;
+$bg-color: #fdf9f9;
 
 
 
@@ -69,3 +82,8 @@ $breakpoints: (
 /// @example scss - When using a CDN
 /// $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+/// Relative or absolute FONTS where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+$openSans: 'Open Sans', Helvetica,Arial,sans-serif;

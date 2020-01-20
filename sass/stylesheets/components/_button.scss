@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+#btn-reset {
+    color: $mid-yellow;
+    cursor: pointer;
+    font-size:16px;
+    font-weight: 700;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 0 2em;
+    max-width: 160px; 
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%; 
+    background: $green;
+    border: 0;
+    border-radius: 5px;
+    font-family: $openSans;
+    &:hover {
+        background: $black-blue;
+        transition: all 250ms linear;
+        color: $light;
+    }
+}
